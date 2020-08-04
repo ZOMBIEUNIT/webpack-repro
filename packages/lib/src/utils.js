@@ -1,0 +1,1 @@
+export const leftPad = (str, ...args) => String.prototype.padStart.apply(str, args)
