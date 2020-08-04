@@ -2,6 +2,35 @@
 
 This repository attempts to demonstrate a minimal repro of the issue that we currently face migrating our project from webpack 4 to 5. Specifically: `__webpack_require__` goes bang attempting to import a library local to our project.
 
+Repository layout (`*` indicates a file output by build/installation):
+
+```
+  webpack-repro
+* ├── node_modules
+  ├── README.md
+  ├── package-lock.json
+  ├── package.json
+  └── packages
+      ├── lib
+*     │   ├── dist
+*     │   │   └── main.js
+      │   ├── package.json
+      │   ├── src
+      │   │   ├── index.js
+      │   │   └── utils.js
+      │   └── webpack.config.js
+      └── web
+          ├── dist
+          │   ├── index.html
+*         │   └── main.js
+          ├── node_modules
+          │   └── @my-cool-project
+          │       └── lib -> ../../../lib
+          ├── src
+          │   └── index.js
+          └── webpack.config.js
+```
+
 There are two packages in this monorepo: `web` and `lib`.
 
 - `lib` is a library that exports one function, leftPad.
