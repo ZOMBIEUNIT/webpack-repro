@@ -15,8 +15,6 @@ module.exports = {
   mode: 'development',
   watch: true,
   optimization: {
-    removeAvailableModules: false,
-    removeEmptyChunks: false,
     splitChunks: {
       cacheGroups: {
         localLibs: {
