@@ -1,0 +1,12 @@
+{
+    "name": "@my-cool-project/lib",
+    "version": "1.0.0",
+    "description": "",
+    "main": "dist/main.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Alex Birch",
+    "license": "MIT"
+  }
+  

@@ -1,4 +1,4 @@
-import path from 'path'
+const path = require('path')
 
 module.exports = {
   entry: path.resolve(__dirname, 'src/index.js'),
@@ -8,6 +8,5 @@ module.exports = {
     library: 'lib',
     libraryTarget: 'umd'
   },
-  mode: 'development',
-  watch: true
+  mode: 'development'
 };
