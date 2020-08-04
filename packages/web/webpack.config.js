@@ -9,6 +9,24 @@ module.exports = {
   resolve: {
     symlinks: false
   },
+  devServer: {
+    contentBase: './dist'
+  },
   mode: 'development',
-  watch: true
+  watch: true,
+  optimization: {
+    removeAvailableModules: false,
+    removeEmptyChunks: false,
+    splitChunks: {
+      cacheGroups: {
+        localLibs: {
+          test: module => module === 'lib',
+          idHint: 'localLibs',
+          chunks: 'initial',
+          enforce: true,
+          priority: 1
+        }
+      }
+    }
+  }
 };

@@ -1,8 +1,7 @@
 ```bash
 npm i
 cd packages/lib
-npx webpack
-cd ../../
-cd packages/web
-npx webpack
+node ../../node_modules/.bin/webpack
+cd ../web
+node ../../node_modules/.bin/webpack-dev-server
 ```
