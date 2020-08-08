@@ -9,7 +9,7 @@
   "author": "Alex Birch",
   "license": "MIT",
   "devDependencies": {
-    "webpack": "^5.0.0-beta.23",
+    "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
   }
